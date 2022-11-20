@@ -16,5 +16,13 @@ int main()
 	cout << "Enter the second string: ";
 	cin >> S2;
 	
-
+	for (int i = 0; i < int(S1.length()); ++i) {
+		for (int j = 0; j < int(S2.length()); ++j) {
+			if (S1[i] == S2[j]) {
+				S1.erase(remove(S1.begin(), S1.end(), 't'), S1.end());
+			}
+		}
+	}
+	
+	cout << "The final string is: \"" << S1 << "\"\n";
 }
